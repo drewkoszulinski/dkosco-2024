@@ -8,7 +8,8 @@ export const HeroAnimation = () => {
       <div className={classNames(styles["shape"], styles["shape-2"])}></div>
       <div className={classNames(styles["shape"], styles["shape-3"])}></div>
       <div className={classNames(styles["shape"], styles["shape-4"])}></div>
-      <div className={classNames(styles["shape"], styles["shape-5"])}></div>
+      <div className={classNames(styles["shape"], styles["shape-5a"])}></div>
+      <div className={classNames(styles["shape"], styles["shape-5b"])}></div>
       <div className={classNames(styles["shape"], styles["shape-6"])}></div>
       <div className={classNames(styles["shape"], styles["shape-7"])}></div>
       <div className={classNames(styles["shape"], styles["shape-8"])}></div>

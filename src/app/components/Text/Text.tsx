@@ -18,11 +18,9 @@ export const Text = (props: TextProps) => {
   return (
     <Tag
       className={classNames("max-w-full", {
-        "font-reg": props.isMono === true,
-
         "text-xl": size === "xl",
         "text-lg": size === "lg",
-        "text-md font-reg": size === "md",
+        "text-md font-medium": size === "md",
         "font-bold": size === "xl" && !props.isMono,
         "font-semibold": size === "lg" && !props.isMono,
 
@@ -30,6 +28,7 @@ export const Text = (props: TextProps) => {
         "text-[var(--color-text-secondary)]": color === "secondary",
         "text-[var(--color-text-highlight)]": color === "highlight",
 
+        "font-reg": props.isMono === true,
         [roboto_mono.className]: props.isMono === true,
       })}
     >

@@ -35,55 +35,16 @@ export const Icons: IconListType = {
     <svg
       width="100%"
       height="100%"
-      viewBox="0 0 76 77"
-      fill="transparent"
+      viewBox="0 0 16 16"
+      fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_d_46_4957)">
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M41.4486 35.1667H32V33.8334H41.4486L37.2533 29.6381L38.1961 28.6953L44.0009 34.5001L38.1961 40.3048L37.2533 39.362L41.4486 35.1667Z"
-          fill="#ECC4FF"
-        />
-      </g>
-      <defs>
-        <filter
-          id="filter0_d_46_4957"
-          x="-2"
-          y="-1.5"
-          width="80"
-          height="80"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
-        >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="4" />
-          <feGaussianBlur stdDeviation="16" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.75 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_46_4957"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_46_4957"
-            result="shape"
-          />
-        </filter>
-      </defs>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M11.4486 8.66672H2V7.33338H11.4486L7.25334 3.13812L8.19615 2.19531L14.0009 8.00005L8.19615 13.8048L7.25334 12.862L11.4486 8.66672Z"
+        fill="currentColor"
+      />
     </svg>
   ),
   code: (

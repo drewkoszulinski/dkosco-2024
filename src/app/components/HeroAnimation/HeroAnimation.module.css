@@ -1,10 +1,11 @@
 .animation-wrapper {
-  width: 25rem;
+  width: 46rem;
   height: 35rem;
-  margin-left: auto;
-  margin-right: 2rem;
-  margin-top: 7rem;
-  /* margin-right: var(--dimension-2); */
+  /* opacity: 0.8; */
+  z-index: -10;
+  /* margin-right: 4rem; */
+  /* margin-left: 2rem; */
+  margin-top: 4rem;
   position: relative;
 
   .shape {
@@ -18,7 +19,7 @@
   .shape.shape-1 {
     width: var(--dimension-1);
     height: var(--dimension-1);
-    background: var(--color-gray-800);
+    background: var(--color-eggplant-800);
     top: 0;
     left: var(--dimension-3);
     animation-name: shape-1;
@@ -27,7 +28,7 @@
   .shape.shape-2 {
     width: var(--dimension-1);
     height: var(--dimension-1);
-    background: var(--color-gray-800);
+    background: var(--color-eggplant-800);
     top: var(--dimension-1);
     left: var(--dimension-half);
     border-radius: var(--radius-full);
@@ -37,7 +38,7 @@
   .shape.shape-3 {
     width: var(--dimension-2);
     height: var(--dimension-1);
-    background: var(--color-orange-600);
+    background: var(--color-orange-400);
     top: var(--dimension-1);
     left: var(--dimension-2);
     animation-name: shape-3;
@@ -46,7 +47,7 @@
   .shape.shape-4 {
     width: var(--dimension-1);
     height: var(--dimension-1);
-    background: var(--color-orange-400);
+    background: var(--color-purple-400);
     top: var(--dimension-1);
     left: var(--dimension-4);
     animation-name: shape-4;
@@ -54,13 +55,20 @@
   }
   
   
-  .shape.shape-5 {
+  .shape.shape-5a {
     width: var(--dimension-2);
-    height: var(--dimension-2);
-    background-color: var(--color-green-400);
+    height: var(--dimension-1);
+    background-color: var(--color-purple-600);
     top: var(--dimension-2);
+    left: var(--dimension-half);
+  }
+
+  .shape.shape-5b {
+    width: var(--dimension-2);
+    height: var(--dimension-1);
+    background-color: var(--color-green-400);
+    top: var(--dimension-3);
     left: 0;
-    animation-name: shape-5;
   }
   
   .shape.shape-6 {
@@ -77,7 +85,7 @@
   .shape.shape-7 {
     width: var(--dimension-2);
     height: var(--dimension-1);
-    background: var(--color-orange-400);
+    background: var(--color-purple-400);
     top: var(--dimension-2);
     left: var(--dimension-2);
   }
@@ -95,7 +103,7 @@
   .shape.shape-9 {
     width: var(--dimension-2);
     height: var(--dimension-2);
-    background: var(--color-orange-600);
+    background: var(--color-green-600);
     top: var(--dimension-3);
     left: var(--dimension-2);
     z-index: 20;
@@ -105,7 +113,7 @@
   .shape.shape-10 {
     width: var(--dimension-2);
     height: var(--dimension-2);
-    background: var(--color-purple-400);
+    background: var(--color-green-400);
     top: var(--dimension-3);
     left: var(--dimension-2);
     border-radius: var(--radius-full);
@@ -125,7 +133,7 @@
   .shape.shape-12 {
     width: var(--dimension-1);
     height: var(--dimension-1);
-    background: var(--color-gray-800);
+    background: var(--color-eggplant-800);
     top: var(--dimension-4);
     left: var(--dimension-1);
   }
@@ -133,7 +141,7 @@
   .shape.shape-13 {
     width: var(--dimension-1);
     height: var(--dimension-1);
-    background: var(--color-green-400);
+    background: var(--color-orange-400);
     top: var(--dimension-4);
     left: var(--dimension-4);
     border-radius: var(--radius-full);
@@ -145,7 +153,7 @@
   .shape.shape-14 {
     width: var(--dimension-1);
     height: var(--dimension-1);
-    background: var(--color-orange-600);
+    background: var(--color-orange-400);
     top: var(--dimension-5);
     left: var(--dimension-2);
   }
@@ -153,7 +161,7 @@
   .shape.shape-15 {
     width: var(--dimension-2);
     height: var(--dimension-1);
-    background: var(--color-purple-600);
+    background: var(--color-purple-400);
     top: var(--dimension-5);
     left: var(--dimension-3);
   }
@@ -161,7 +169,7 @@
   .shape.shape-16 {
     width: var(--dimension-1);
     height: var(--dimension-1);
-    background: var(--color-gray-800);
+    background: var(--color-eggplant-800);
     top: var(--dimension-6);
     left: var(--dimension-4);
   }
@@ -170,10 +178,10 @@
     width: var(--dimension-2);
     height: var(--dimension-2);
     background: var(--color-purple-600);
-    top: var(--dimension-1);
+    top: var(--dimension-4);
     left: var(--dimension-4);
     border-radius: var(--radius-full);
-    z-index: -10;
+    z-index: -20;
     animation-name: shape-17;
   }
 }
@@ -216,25 +224,25 @@
 @keyframes shape-8 {
   0% {transform: rotatex(0deg); background: var(--color-purple-600);}
   76% {transform: rotatex(0deg); background: var(--color-purple-600);}
-  79% {transform: rotatex(180deg); background: var(--color-orange-600);}
-  100% {transform: rotatex(180deg); background: var(--color-orange-600);}
+  79% {transform: rotatex(180deg); background: var(--color-orange-400);}
+  100% {transform: rotatex(180deg); background: var(--color-orange-400);}
 }
 
 @keyframes shape-9 {
   0% {
-    background: var(--color-orange-600);
+    background: var(--color-green-600);
     transform: rotatex(0);
   }
   72% {
-    background: var(--color-orange-600);
+    background: var(--color-green-600);
     transform: rotatex(0);
   }
   79% {
-    background: var(--color-purple-400);
+    background: var(--color-green-400);
     transform: rotatex(180deg);
   }
   100% {
-    background: var(--color-purple-400);
+    background: var(--color-green-400);
     transform: rotatex(180deg);
   }
 }
@@ -255,7 +263,14 @@
   42% {
     transform: scaleY(1) translateY(5rem);
   }
+  72% {
+    background: var(--color-green-400);
+  }
+  79% {
+    background: var(--color-green-600);
+  }
   100% {
+    background: var(--color-green-600);
     transform:  scaleY(1) translateY(5rem);
   }
 }
@@ -263,21 +278,23 @@
 @keyframes shape-13 {
   0% {
     transform: translateY(0);
+    background: var(--color-orange-400);
   }
   35% {
     transform: translateY(0);
+    background: var(--color-orange-400);
   }
   38% {
-    transform: translateY(var(--dimension-1));
-    background: var(--color-green-400);
+    transform: translateY(var(--dimension-1));  
+    background: var(--color-orange-400);
   }
   39% {
     transform: translateY(calc(var(--dimension-1) * -1));
-    background: var(--color-gray-800);
+    background: var(--color-purple-600);
   }
   100% {
     transform: translateY(calc(var(--dimension-1) * -1));
-    background: var(--color-gray-800);
+    background: var(--color-purple-600);
   }
 }
 

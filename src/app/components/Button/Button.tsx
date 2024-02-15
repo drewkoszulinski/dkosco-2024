@@ -3,6 +3,7 @@ import React from "react";
 import classNames from "classnames";
 import Link from "next/link";
 import { Icon, IconNameProps } from "../Icon";
+import { roboto_mono } from "@/app/fonts";
 
 interface ButtonProps {
   label: string;
@@ -20,8 +21,9 @@ export const Button = (props: ButtonProps) => {
   const { variant = "primary", label, onClick, isDisabled, href } = props;
 
   const buttonClasses = classNames(
-    "transition-sm min-w-max rounded-md py-3 px-4",
+    "transition-sm min-w-max max-w-max rounded-md py-3 px-4",
     styles["button"],
+    roboto_mono.className,
     {
       [styles["button-primary"]]: variant === "primary" && !isDisabled,
       [styles["button-secondary"]]: variant === "secondary" && !isDisabled,

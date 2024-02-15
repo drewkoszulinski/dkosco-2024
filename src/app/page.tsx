@@ -4,16 +4,14 @@ import { Text } from "./components/Text";
 import { HomepageCard } from "./components/HomepageCard";
 import { HeroAnimation } from "./components/HeroAnimation/HeroAnimation";
 import { WorkListItem } from "./components/WorkListItem";
+import { BioSection } from "./components/BioSection";
 
 export default function Home() {
   return (
     <main className="flex flex-col gap-y-[11.5rem] min-h-screen px-10 pt-10 pb-40">
       <div className={classNames("w-full max-w-[75rem] mx-auto flex")}>
-        <div
-          className={classNames(
-            "flex flex-col gap-y-24 w-full max-w-[43rem] pt-16"
-          )}
-        >
+        <HeroAnimation />
+        <div className={classNames("flex flex-col gap-y-12 w-full pt-16")}>
           <div className={classNames("flex flex-col w-full")}>
             <Text size="xl" as="h1">
               Drew Koszulinski
@@ -40,7 +38,6 @@ export default function Home() {
             />
           </div>
         </div>
-        <HeroAnimation />
       </div>
 
       <div
@@ -60,30 +57,31 @@ export default function Home() {
           />
           <WorkListItem
             title="Flatiron School"
-            subtitle="Pretty Much Everything But The Backend"
-            href="/get-aligned"
+            subtitle="Design Lead + React UI Systems Development"
+            href="/flatiron"
             buttonLabel="Case Study"
           />
           <WorkListItem
-            title="Broadnet Teleservices"
-            subtitle="Pretty Much Everything But The Backend"
-            href="/get-aligned"
+            title="QuickNode"
+            subtitle="React UI Systems Engineering"
+            href="/qn"
             buttonLabel="Read More"
           />
           <WorkListItem
-            title="QuickNode"
-            subtitle="Pretty Much Everything But The Backend"
-            href="/get-aligned"
+            title="Broadnet Teleservices"
+            subtitle="Design + Angular UI Development"
+            href="/broadnet"
             buttonLabel="Read More"
           />
           <WorkListItem
             title="Rayka"
-            subtitle="Pretty Much Everything But The Backend"
-            href="/get-aligned"
+            subtitle="Head of Design"
+            href="/rayka"
             buttonLabel="Read More"
           />
         </div>
       </div>
+      <BioSection />
     </main>
   );
 }
