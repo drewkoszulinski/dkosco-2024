@@ -1,0 +1,297 @@
+.animation-wrapper {
+  width: 25rem;
+  height: 35rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  margin-top: 7rem;
+  /* margin-right: var(--dimension-2); */
+  position: relative;
+
+  .shape {
+    position: absolute;
+    animation-duration: 32s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.450, 0.000, 0.000, 1.000); 
+  }
+
+  .shape.shape-1 {
+    width: var(--dimension-1);
+    height: var(--dimension-1);
+    background: var(--color-gray-800);
+    top: 0;
+    left: var(--dimension-3);
+    animation-name: shape-1;
+  }
+  
+  .shape.shape-2 {
+    width: var(--dimension-1);
+    height: var(--dimension-1);
+    background: var(--color-gray-800);
+    top: var(--dimension-1);
+    left: var(--dimension-half);
+    border-radius: var(--radius-full);
+    animation-name: shape-2;
+  }
+  
+  .shape.shape-3 {
+    width: var(--dimension-2);
+    height: var(--dimension-1);
+    background: var(--color-orange-600);
+    top: var(--dimension-1);
+    left: var(--dimension-2);
+    animation-name: shape-3;
+  }
+  
+  .shape.shape-4 {
+    width: var(--dimension-1);
+    height: var(--dimension-1);
+    background: var(--color-orange-400);
+    top: var(--dimension-1);
+    left: var(--dimension-4);
+    animation-name: shape-4;
+    transform-origin: bottom;
+  }
+  
+  
+  .shape.shape-5 {
+    width: var(--dimension-2);
+    height: var(--dimension-2);
+    background-color: var(--color-green-400);
+    top: var(--dimension-2);
+    left: 0;
+    animation-name: shape-5;
+  }
+  
+  .shape.shape-6 {
+    width: var(--dimension-2);
+    height: var(--dimension-2);
+    background: var(--color-bg-primary);
+    top: var(--dimension-2);
+    left: var(--dimension-1);
+    border-radius: var(--radius-full);
+    z-index: 10;
+    animation-name: shape-6;
+  }
+
+  .shape.shape-7 {
+    width: var(--dimension-2);
+    height: var(--dimension-1);
+    background: var(--color-orange-400);
+    top: var(--dimension-2);
+    left: var(--dimension-2);
+  }
+  
+  .shape.shape-8 {
+    width: var(--dimension-1);
+    height: var(--dimension-1);
+    background: var(--color-purple-600);
+    top: calc(var(--dimension-3) + var(--dimension-half));
+    left: 0;
+    border-radius: var(--radius-full);
+    animation-name: shape-8;
+  }
+  
+  .shape.shape-9 {
+    width: var(--dimension-2);
+    height: var(--dimension-2);
+    background: var(--color-orange-600);
+    top: var(--dimension-3);
+    left: var(--dimension-2);
+    z-index: 20;
+    animation-name: shape-9;
+  }
+  
+  .shape.shape-10 {
+    width: var(--dimension-2);
+    height: var(--dimension-2);
+    background: var(--color-purple-400);
+    top: var(--dimension-3);
+    left: var(--dimension-2);
+    border-radius: var(--radius-full);
+    z-index: 30;
+  }
+  
+  .shape.shape-11 {
+    width: var(--dimension-1);
+    height: var(--dimension-1);
+    background: var(--color-green-400);
+    top: var(--dimension-3);
+    left: var(--dimension-4);
+    animation-name: shape-11;
+    transform-origin: top;
+  }
+  
+  .shape.shape-12 {
+    width: var(--dimension-1);
+    height: var(--dimension-1);
+    background: var(--color-gray-800);
+    top: var(--dimension-4);
+    left: var(--dimension-1);
+  }
+  
+  .shape.shape-13 {
+    width: var(--dimension-1);
+    height: var(--dimension-1);
+    background: var(--color-green-400);
+    top: var(--dimension-4);
+    left: var(--dimension-4);
+    border-radius: var(--radius-full);
+    animation-name: shape-13;
+    z-index: -10;
+    transform-origin: top left;
+  }
+  
+  .shape.shape-14 {
+    width: var(--dimension-1);
+    height: var(--dimension-1);
+    background: var(--color-orange-600);
+    top: var(--dimension-5);
+    left: var(--dimension-2);
+  }
+  
+  .shape.shape-15 {
+    width: var(--dimension-2);
+    height: var(--dimension-1);
+    background: var(--color-purple-600);
+    top: var(--dimension-5);
+    left: var(--dimension-3);
+  }
+  
+  .shape.shape-16 {
+    width: var(--dimension-1);
+    height: var(--dimension-1);
+    background: var(--color-gray-800);
+    top: var(--dimension-6);
+    left: var(--dimension-4);
+  }
+  
+  .shape.shape-17 {
+    width: var(--dimension-2);
+    height: var(--dimension-2);
+    background: var(--color-purple-600);
+    top: var(--dimension-1);
+    left: var(--dimension-4);
+    border-radius: var(--radius-full);
+    z-index: -10;
+    animation-name: shape-17;
+  }
+}
+
+@keyframes shape-2 {
+  0% {transform: translateX(0)}
+  10% {transform: translateX(0)}
+  20% {transform: translateX(var(--dimension-1))}
+  100% {transform: translateX(var(--dimension-1))}
+}
+
+@keyframes shape-3 {
+  0% {transform: translateX(0)}
+  9% {transform: translateX(0)}
+  12% {transform: translateX(var(--dimension-1))}
+  100% {transform: translateX(var(--dimension-1))}
+}
+
+@keyframes shape-4 {
+  0% {
+    transform: translateX(0) rotateY(0deg);
+  }
+  7% {
+    transform: translateX(0) rotateY(0deg);
+  }
+  10% {
+    transform: translateX(0) rotateX(180deg);
+  }
+  65% {
+    transform: translateX(0) rotateX(180deg);
+  }
+  68% {
+    transform: translateX(-5rem) rotateX(180deg);
+  }
+  100% {
+    transform: translateX(-5rem) rotateX(180deg);
+  }
+}
+
+@keyframes shape-8 {
+  0% {transform: rotatex(0deg); background: var(--color-purple-600);}
+  76% {transform: rotatex(0deg); background: var(--color-purple-600);}
+  79% {transform: rotatex(180deg); background: var(--color-orange-600);}
+  100% {transform: rotatex(180deg); background: var(--color-orange-600);}
+}
+
+@keyframes shape-9 {
+  0% {
+    background: var(--color-orange-600);
+    transform: rotatex(0);
+  }
+  72% {
+    background: var(--color-orange-600);
+    transform: rotatex(0);
+  }
+  79% {
+    background: var(--color-purple-400);
+    transform: rotatex(180deg);
+  }
+  100% {
+    background: var(--color-purple-400);
+    transform: rotatex(180deg);
+  }
+}
+
+@keyframes shape-11 {
+  0% {
+    transform: scaleY(1) translateY(0);
+  }
+  35% {
+    transform: scaleY(1) translateY(0);
+  }
+  38% {
+    transform: scaleY(2) translateY(0);
+  }
+  39% {
+    transform: scaleY(2) translateY(0);
+  }
+  42% {
+    transform: scaleY(1) translateY(5rem);
+  }
+  100% {
+    transform:  scaleY(1) translateY(5rem);
+  }
+}
+
+@keyframes shape-13 {
+  0% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(0);
+  }
+  38% {
+    transform: translateY(var(--dimension-1));
+    background: var(--color-green-400);
+  }
+  39% {
+    transform: translateY(calc(var(--dimension-1) * -1));
+    background: var(--color-gray-800);
+  }
+  100% {
+    transform: translateY(calc(var(--dimension-1) * -1));
+    background: var(--color-gray-800);
+  }
+}
+
+@keyframes shape-17 {
+  0% {
+    transform: scale(1,1);
+  }
+  65% {
+    transform: scale(1,1);
+  }
+  68% {
+    transform: scale(0.5,0.5);
+  }
+  100% {
+    transform: scale(0.5,0.5);
+  }
+}

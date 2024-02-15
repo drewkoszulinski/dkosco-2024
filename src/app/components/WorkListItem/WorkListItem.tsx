@@ -1,0 +1,35 @@
+import classNames from "classnames";
+import { Text } from "../Text";
+import { Button } from "../Button";
+
+interface WorkListItemProps {
+  title: string;
+  subtitle: string;
+  href: string;
+  buttonLabel: "Case Study" | "Read More";
+}
+
+export const WorkListItem = (props: WorkListItemProps) => {
+  return (
+    <div
+      className={classNames(
+        "flex w-full items-center gap-x-4 py-6 border-b border-[var(--color-border-primary)]"
+      )}
+    >
+      <div className={classNames("flex flex-col w-full")}>
+        <Text size="lg" as="h4">
+          {props.title}
+        </Text>
+        <Text as="h5" color="highlight" isMono>
+          {props.subtitle}
+        </Text>
+      </div>
+      <Button
+        label={props.buttonLabel}
+        variant={props.buttonLabel === "Case Study" ? "primary" : "secondary"}
+        href={props.href}
+        rightAccessory="arrow-right"
+      />
+    </div>
+  );
+};

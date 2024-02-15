@@ -3,27 +3,55 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color-bg-primary: #1A1D22;
+  --color-bg-secondary: #21252B;
+  --color-bg-tertiary: #323841;
+  --color-bg-button-primary: var(--color-bg-tertiary);
+  --color-bg-button-primary-hover: #584362;
+  --color-bg-button-secondary: transparent;
+  --color-bg-button-secondary-hover: #3B2D41;
+  
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #BFDDE4;
+  --color-text-highlight: #ECC4FF;
+  --color-text-disabled: #829194;
+  --color-text-button: var(--color-text-highlight);
+  --color-text-button-hover: #F3DBFF;
+
+  --color-border-primary: #4A4A4A;
+  --color-border-focus-ring: #7a5c88;
+  
+  --color-gray-800: var(--color-bg-tertiary);
+  --color-purple-600: #765885;
+  --color-purple-400: #A379B6;
+  --color-orange-600: #BD5C32;
+  --color-orange-400: #D29943;
+  --color-green-400: #4EAB79;
+
+  --font-size-md: 1.125rem;
+
+  --line-height-md: 1.5rem;
+  
+  --radius-full: 999px;
+
+  --shadow-focus-ring: 0px 0px 0px 4px var(--color-border-focus-ring),
+  inset 0px 0px 0px 2px var(--color-bg-primary);
+
+  --transition-duration-sm: 250ms;
+  --transition-timing-function-sm: cubic-bezier(0, 0.8, 0.5, 0.99);
+  
+  --dimension-half: 2.5rem;
+  --dimension-1: 5rem;
+  --dimension-2: 10rem;
+  --dimension-3: 15rem;
+  --dimension-4: 20rem;
+  --dimension-5: 25rem;
+  --dimension-6: 30rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.transition-sm {
+  transition-duration: var(--transition-duration-sm);
+  transition-timing-function: var(--transition-timing-function-sm);
 }
 
 @layer utilities {
