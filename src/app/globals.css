@@ -13,12 +13,14 @@
   
   --color-text-primary: #ffffff;
   --color-text-secondary: #BFDDE4;
+  --color-text-tertiary: #849caa;
   --color-text-highlight: #ECC4FF;
   --color-text-disabled: #829194;
   --color-text-button: var(--color-text-highlight);
   --color-text-button-hover: #F3DBFF;
 
   --color-border-primary: #4A4A4A;
+  --color-border-secondary: var(--color-bg-secondary);
   --color-border-focus-ring: #7a5c88;
   
   --color-eggplant-800: #694556;
@@ -34,6 +36,7 @@
   
   --radius-full: 999px;
 
+  --shadow-lg: 0px 8px 32px 0px rgba(33, 22, 35, 0.8);
   --shadow-focus-ring: 0px 0px 0px 4px var(--color-border-focus-ring),
   inset 0px 0px 0px 2px var(--color-bg-primary);
 

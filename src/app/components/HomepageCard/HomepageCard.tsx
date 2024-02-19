@@ -12,12 +12,14 @@ export const HomepageCard = (props: HomepageCardProps) => {
   return (
     <div
       className={classNames(
-        "flex gap-x-4 bg-[var(--color-bg-secondary)] rounded-xl p-4"
+        "flex gap-x-4 bg-[var(--color-bg-secondary)] rounded-xl p-4 shadow-lg"
       )}
     >
       <Icon name={props.iconName} color="highlight" size={40} />
       <div className={classNames("flex flex-col w-full")}>
-        <Text size="lg">{props.cardTitle}</Text>
+        <Text size="lg" useBottomMargin={false}>
+          {props.cardTitle}
+        </Text>
         <Text color="secondary" isMono>
           {props.cardBody}
         </Text>

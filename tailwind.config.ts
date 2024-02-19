@@ -11,6 +11,7 @@ const config: Config = {
       xl: ['3rem', '3.625rem'],
       lg: ['1.5rem', '2rem'],
       md: ['1.125rem', '1.75rem'],
+      sm: ['0.875rem', '1.125rem'],
     },
     fontWeight: {
       bold: '700',
@@ -27,7 +28,7 @@ const config: Config = {
       full: '9990px',
     },
     boxShadow: {
-      lg: '0px 8px 32px 0px rgba(0, 0, 0, 0.5)',
+      lg: 'var(--shadow-lg)',
     },
     extend: {
     },

@@ -1,4 +1,10 @@
-export type IconNameProps = "atom" | "arrow-right" | "code" | "design" | "send";
+export type IconNameProps =
+  | "atom"
+  | "arrow-left"
+  | "arrow-right"
+  | "code"
+  | "design"
+  | "send";
 
 type IconListType = {
   [key: string]: React.JSX.Element;
@@ -29,6 +35,22 @@ export const Icons: IconListType = {
       <circle cx="24" cy="7" r="1.5" stroke="#ECC4FF" />
       <circle cx="29" cy="30" r="1.5" stroke="#ECC4FF" />
       <circle cx="6.71503" cy="22.867" r="1.5" stroke="#ECC4FF" />
+    </svg>
+  ),
+  "arrow-left": (
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M4.55238 8.66672H14.001V7.33338H4.55238L8.74764 3.13812L7.80483 2.19531L2.00009 8.00005L7.80483 13.8048L8.74764 12.862L4.55238 8.66672Z"
+        fill="currentColor"
+      />
     </svg>
   ),
   "arrow-right": (

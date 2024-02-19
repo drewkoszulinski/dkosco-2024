@@ -4,11 +4,12 @@ import { roboto_mono } from "../../fonts";
 type TextTag = "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "span";
 
 interface TextProps {
-  size?: "md" | "lg" | "xl";
+  size?: "sm" | "md" | "lg" | "xl";
   children?: React.ReactNode;
   as?: TextTag;
-  color?: "primary" | "secondary" | "highlight";
+  color?: "primary" | "secondary" | "tertiary" | "highlight";
   isMono?: boolean;
+  useBottomMargin?: boolean;
 }
 
 export const Text = (props: TextProps) => {
@@ -19,13 +20,17 @@ export const Text = (props: TextProps) => {
     <Tag
       className={classNames("max-w-full", {
         "text-xl": size === "xl",
-        "text-lg": size === "lg",
+        "text-lg mb-2": size === "lg",
         "text-md font-medium": size === "md",
+        "text-sm font-medium": size === "sm",
         "font-bold": size === "xl" && !props.isMono,
         "font-semibold": size === "lg" && !props.isMono,
 
+        "mb-4": props.useBottomMargin,
+
         "text-[var(--color-text-primary)]": color === "primary",
         "text-[var(--color-text-secondary)]": color === "secondary",
+        "text-[var(--color-text-tertiary)]": color === "tertiary",
         "text-[var(--color-text-highlight)]": color === "highlight",
 
         "font-reg": props.isMono === true,

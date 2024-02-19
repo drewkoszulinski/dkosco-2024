@@ -74,6 +74,12 @@ export default function Home() {
             buttonLabel="Read More"
           />
           <WorkListItem
+            title="Russell Reynolds"
+            subtitle="Design Lead"
+            href="/rr"
+            buttonLabel="Read More"
+          />
+          <WorkListItem
             title="Rayka"
             subtitle="Head of Design"
             href="/rayka"
