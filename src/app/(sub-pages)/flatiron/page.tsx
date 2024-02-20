@@ -21,11 +21,11 @@ export default function FlatironPage() {
         )}
       >
         <Image
-          width={1800}
-          height={1667}
+          width={2491}
+          height={1612}
           src="/flatiron-ui-system.jpg"
           alt="An array of components from the Flatiron School UI System"
-          className="-rotate-12 mx-auto scale-[300%] md:scale-125 translate-y-32 md:-translate-y-24 2xl:-translate-y-40"
+          className="-rotate-12 mx-auto scale-[300%] md:scale-125 xl:scale-100 translate-y-32 md:-translate-y-16 lg:-translate-y-48 2xl:-translate-y-80"
         />
       </div>
 

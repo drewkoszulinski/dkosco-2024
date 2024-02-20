@@ -38,11 +38,11 @@ export default function GetAlignedPage() {
         )}
       >
         <Image
-          width={1800}
+          width={2923}
           height={1667}
           src="/ga-ui-system.jpg"
           alt="An array of components from the Get Aligned UI System"
-          className="-rotate-12 mx-auto scale-[300%] md:scale-150 translate-y-32 md:-translate-y-8 2xl:translate-x-20"
+          className="-rotate-12 mx-auto scale-[300%] md:scale-150 xl:scale-100 translate-y-32 md:-translate-y-8 lg:-translate-y-32 2xl:-translate-y-80 2xl:translate-x-20"
         />
       </div>
 
