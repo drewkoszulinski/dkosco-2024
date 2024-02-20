@@ -25,7 +25,7 @@ const FlatironPage = () => {
           height={1667}
           src="/flatiron-ui-system.jpg"
           alt="An array of components from the Flatiron School UI System"
-          className="-rotate-12 -translate-y-1/4 translate-x-20 mx-auto origin-bottom"
+          className="-rotate-12 mx-auto scale-[300%] md:scale-125 translate-y-32 md:-translate-y-24 2xl:-translate-y-40"
         />
       </div>
 

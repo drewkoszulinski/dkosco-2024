@@ -13,7 +13,7 @@ export const WorkListItem = (props: WorkListItemProps) => {
   return (
     <div
       className={classNames(
-        "flex w-full items-center gap-x-4 py-6 border-b border-[var(--color-border-primary)]"
+        "flex w-full items-center gap-x-6 py-6 border-b border-[var(--color-border-primary)]"
       )}
     >
       <div className={classNames("flex flex-col w-full")}>

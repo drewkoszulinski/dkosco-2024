@@ -7,6 +7,23 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 
+const videoEmbed = (
+  <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+    <iframe
+      src="https://www.loom.com/embed/bec5df69d30e48b3880032c69b220655?sid=0cac1436-50dd-4a1e-86b9-bf8bc2bd8973"
+      allowFullScreen
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+      }}
+    ></iframe>
+    {/* <div style="position: relative; padding-bottom: 60.33519553072626%; height: 0;"><iframe src="https://www.loom.com/embed/bec5df69d30e48b3880032c69b220655?sid=0cac1436-50dd-4a1e-86b9-bf8bc2bd8973" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div> */}
+  </div>
+);
+
 const GetAlignedPage = () => {
   return (
     <PageContainer>
@@ -25,7 +42,7 @@ const GetAlignedPage = () => {
           height={1667}
           src="/ga-ui-system.jpg"
           alt="An array of components from the Get Aligned UI System"
-          className="-rotate-12 -translate-y-1/4 translate-x-20 mx-auto origin-bottom"
+          className="-rotate-12 mx-auto scale-[300%] md:scale-150 translate-y-32 md:-translate-y-8 2xl:translate-x-20"
         />
       </div>
 
@@ -172,6 +189,7 @@ const GetAlignedPage = () => {
           src="/ga-video.jpg"
           alt="A video clip of one our custom list inputs, including a list of OpenAI-powered suggestions."
           imageHeight={36.5}
+          videoEmbed={videoEmbed}
         />
         <div className={classNames("w-full")}>
           <Text size="lg" as="h3">
@@ -194,7 +212,7 @@ const GetAlignedPage = () => {
         </div>
         <ImageSection
           src="/ga-strategy.jpg"
-          alt="TThe third step of the Create Position Request flow. This is where a user can add context such as synonymous job titles, or target companies and industries or to recruit from."
+          alt="The third step of the Create Position Request flow. This is where a user can add context such as synonymous job titles, or target companies and industries or to recruit from."
           imageHeight={36.5}
         />
         <ImageSection

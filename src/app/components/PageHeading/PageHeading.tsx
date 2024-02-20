@@ -10,7 +10,7 @@ interface PageHeadingProps {
 export const PageHeading = (props: PageHeadingProps) => {
   return (
     <div className={classNames("w-full max-w-[56.25rem] px-4 relative")}>
-      <div className={classNames("absolute fixed top-2 -left-28")}>
+      <div className={classNames("mb-6 xl:absolute xl:top-2 xl:-left-28")}>
         <Button leftAccessory="arrow-left" label="Back" href="/" />
       </div>
       <Text as="h1" size="xl">

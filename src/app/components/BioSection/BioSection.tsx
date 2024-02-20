@@ -12,7 +12,7 @@ export const BioSection = () => {
     >
       <div
         className={classNames(
-          "relative lg:absolute mx-auto -mt-28 lg:mt-0 lg:-top-16 lg:-right-16 mb-4 w-64 h-64 max-w-full shadow-lg rounded-full bg-[var(--color-bg-secondary)] overflow-hidden border-[6px] border-[var(--color-bg-secondary)]"
+          "relative lg:absolute mx-auto -mt-28 lg:mt-0 lg:-top-16 lg:-right-16 mb-4 w-64 aspect-h-1 max-w-full shadow-lg rounded-full bg-[var(--color-bg-secondary)] overflow-hidden border-[6px] border-[var(--color-bg-secondary)]"
         )}
       >
         <Image

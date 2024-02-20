@@ -21,7 +21,7 @@ export default function Home() {
               Drew Koszulinski
             </Text>
             <Text size="lg" as="h2" color="highlight" isMono>
-              Designing & Building Airtight User Experiences
+              Designing & Building Airtight User Experiences since 2014
             </Text>
           </div>
           <div className={classNames("flex flex-col gap-y-6 mt-12")}>
