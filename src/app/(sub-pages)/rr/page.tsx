@@ -8,7 +8,10 @@ import classNames from "classnames";
 export default function RaykaPage() {
   return (
     <PageContainer>
-      <PageHeading title="Resume Parse Tool" subtitle="Design Lead" />
+      <PageHeading
+        title="Resume Parse Tool"
+        subtitle="Refining an MVP thru strategic iteration"
+      />
       <ContentContainer>
         <ImageSection
           src="/rr.jpeg"

@@ -20,7 +20,6 @@ const videoEmbed = (
         height: "100%",
       }}
     ></iframe>
-    {/* <div style="position: relative; padding-bottom: 60.33519553072626%; height: 0;"><iframe src="https://www.loom.com/embed/bec5df69d30e48b3880032c69b220655?sid=0cac1436-50dd-4a1e-86b9-bf8bc2bd8973" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div> */}
   </div>
 );
 

@@ -10,7 +10,7 @@ export default function BroadnetPage() {
     <PageContainer>
       <PageHeading
         title="Broadnet Teleservices"
-        subtitle="Legacy web app rebuild from the ground-up"
+        subtitle="Legacy web app rewrite from the ground-up"
       />
       <ContentContainer>
         <ImageSection

@@ -10,7 +10,7 @@ export default function QuickNodePage() {
     <PageContainer>
       <PageHeading
         title="QuickNode"
-        subtitle="Driving Efficient Product Evolution and Developer Experience Across the Organization"
+        subtitle="Driving product evolution and developer experience across the organization"
       />
       <ContentContainer>
         <ImageSection

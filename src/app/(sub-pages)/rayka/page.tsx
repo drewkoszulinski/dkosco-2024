@@ -10,7 +10,7 @@ export default function RaykaPage() {
     <PageContainer>
       <PageHeading
         title="Rayka"
-        subtitle="Head of Design, 0 to 1, go to market"
+        subtitle="Launching and refining a seed-stage MVPs"
       />
       <ContentContainer>
         <ImageSection
