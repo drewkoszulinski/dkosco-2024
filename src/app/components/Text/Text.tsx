@@ -19,9 +19,9 @@ export const Text = (props: TextProps) => {
   return (
     <Tag
       className={classNames("max-w-full", {
-        "text-xl": size === "xl",
-        "text-lg mb-2": size === "lg",
-        "text-md font-medium": size === "md",
+        "text-[2.5rem] leading-[2.625rem] md:text-xl": size === "xl",
+        "text-[1.5rem] leading-[2rem] md:text-lg mb-2": size === "lg",
+        "text-[1rem] leading-[1.5rem] md:text-md font-medium": size === "md",
         "text-sm font-medium": size === "sm",
         "font-bold": size === "xl" && !props.isMono,
         "font-semibold": size === "lg" && !props.isMono,

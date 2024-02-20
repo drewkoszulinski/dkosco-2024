@@ -17,9 +17,11 @@ export const WorkListItem = (props: WorkListItemProps) => {
       )}
     >
       <div className={classNames("flex flex-col w-full")}>
-        <Text size="lg" as="h4">
-          {props.title}
-        </Text>
+        <div className={classNames("-mb-3")}>
+          <Text size="lg" as="h4">
+            {props.title}
+          </Text>
+        </div>
         <Text as="h5" color="highlight" isMono>
           {props.subtitle}
         </Text>

@@ -8,10 +8,14 @@ import { BioSection } from "./components/BioSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-y-[11.5rem] min-h-screen px-10 pt-10 pb-40">
-      <div className={classNames("w-full max-w-[75rem] mx-auto flex")}>
-        <HeroAnimation />
-        <div className={classNames("flex flex-col gap-y-12 w-full pt-16")}>
+    <main className="flex flex-col gap-y-[11.5rem] min-h-screen px-4 md:px-10 pt-4 md:pt-10 pb-40">
+      <div
+        className={classNames(
+          "w-full max-w-[75rem] mx-auto relative mb-32 md:mb-0"
+        )}
+      >
+        <div className={classNames("pt-12 md:pt-16 lg:ml-[28.5rem] !z-40")}>
+          <HeroAnimation />
           <div className={classNames("flex flex-col w-full")}>
             <Text size="xl" as="h1">
               Drew Koszulinski
@@ -20,7 +24,7 @@ export default function Home() {
               Designing & Building Airtight User Experiences
             </Text>
           </div>
-          <div className={classNames("flex flex-col gap-y-6")}>
+          <div className={classNames("flex flex-col gap-y-6 mt-12")}>
             <HomepageCard
               iconName="design"
               cardTitle="Design"
@@ -40,11 +44,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        className={classNames(
-          "flex flex-col gap-y-4 w-full max-w-[50rem] mx-auto"
-        )}
-      >
+      <div className={classNames("w-full max-w-[50rem] mx-auto z-20")}>
         <Text size="xl" as="h3">
           Work
         </Text>

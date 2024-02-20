@@ -34,7 +34,7 @@ export const Button = (props: ButtonProps) => {
     <>
       <div
         className={classNames(
-          "inline-flex gap-2 justify-center text-center items-center"
+          "inline-flex gap-2 justify-center text-center items-center text-[1rem] leading-[1.5rem] md:text-md"
         )}
       >
         {props.leftAccessory ? (

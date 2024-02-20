@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="w-full h-screen bg-[var(--color-bg-primary)]">
       <body
         className={classNames(
           syne.className,
