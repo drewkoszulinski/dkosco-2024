@@ -5,7 +5,7 @@ import { PageHeading } from "@/app/components/PageHeading";
 import { Text } from "@/app/components/Text";
 import classNames from "classnames";
 
-export const RaykaPage = () => {
+export default function RaykaPage() {
   return (
     <PageContainer>
       <PageHeading title="Resume Parse Tool" subtitle="Design Lead" />
@@ -44,6 +44,4 @@ export const RaykaPage = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default RaykaPage;
+}

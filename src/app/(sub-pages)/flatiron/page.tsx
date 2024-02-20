@@ -7,7 +7,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 
-const FlatironPage = () => {
+export default function FlatironPage() {
   return (
     <PageContainer>
       <PageHeading
@@ -175,6 +175,4 @@ const FlatironPage = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default FlatironPage;
+}

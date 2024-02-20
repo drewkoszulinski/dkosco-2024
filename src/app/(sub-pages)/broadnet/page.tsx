@@ -5,7 +5,7 @@ import { PageHeading } from "@/app/components/PageHeading";
 import { Text } from "@/app/components/Text";
 import classNames from "classnames";
 
-export const BroadnetPage = () => {
+export default function BroadnetPage() {
   return (
     <PageContainer>
       <PageHeading
@@ -49,6 +49,4 @@ export const BroadnetPage = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default BroadnetPage;
+}

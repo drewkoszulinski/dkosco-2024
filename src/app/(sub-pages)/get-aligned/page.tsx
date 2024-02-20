@@ -24,7 +24,7 @@ const videoEmbed = (
   </div>
 );
 
-const GetAlignedPage = () => {
+export default function GetAlignedPage() {
   return (
     <PageContainer>
       <PageHeading
@@ -223,6 +223,4 @@ const GetAlignedPage = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default GetAlignedPage;
+}

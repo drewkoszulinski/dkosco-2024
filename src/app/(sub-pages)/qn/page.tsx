@@ -5,7 +5,7 @@ import { PageHeading } from "@/app/components/PageHeading";
 import { Text } from "@/app/components/Text";
 import classNames from "classnames";
 
-export const QuickNodePage = () => {
+export default function QuickNodePage() {
   return (
     <PageContainer>
       <PageHeading
@@ -52,6 +52,4 @@ export const QuickNodePage = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default QuickNodePage;
+}
