@@ -40,12 +40,22 @@ export const BioSection = () => {
         elegant, accessible, and robust user experience. If there’s anything I
         can help with, please get in touch!
       </Text>
-      <Button
-        href="https://drew61.typeform.com/to/dysVVM?typeform-source=dkos.co"
-        label="Send me a message"
-        rightAccessory="send"
-        variant="primary"
-      />
+      <div className={classNames("flex gap-x-3")}>
+        <Button
+          href="https://drew61.typeform.com/to/dysVVM?typeform-source=dkos.co"
+          label="Send me a message"
+          rightAccessory="send"
+          variant="primary"
+          target="_blank"
+        />
+        <Button
+          href="/cv-drew-koszulinski.pdf"
+          label="CV"
+          rightAccessory="download"
+          variant="primary"
+          target="_blank"
+        />
+      </div>
     </div>
   );
 };

@@ -21,7 +21,7 @@ export const Text = (props: TextProps) => {
       className={classNames("max-w-full", {
         "text-[2.5rem] leading-[2.625rem] md:text-xl": size === "xl",
         "text-lg mb-2": size === "lg",
-        "text-[1.25rem] leading-[1.75rem] md:text-lg font-medium":
+        "text-[1.25rem] leading-[1.75rem] md:text-[1.5rem] font-medium":
           size === "lg" && props.isMono,
         "text-[1rem] leading-[1.5rem] md:text-md font-medium": size === "md",
         "text-sm font-medium": size === "sm",

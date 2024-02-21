@@ -9,6 +9,7 @@ interface ButtonProps {
   label: string;
   variant?: "primary" | "secondary";
   isExternal?: boolean;
+  target?: "_blank" | "_self";
   isDisabled?: boolean;
   // eslint-disable-next-line no-unused-vars
   onClick?: (e: any) => void;
@@ -34,15 +35,15 @@ export const Button = (props: ButtonProps) => {
     <>
       <div
         className={classNames(
-          "inline-flex gap-2 justify-center text-center items-center text-[1rem] leading-[1.5rem] md:text-md"
+          "inline-flex gap-3 justify-center text-center items-center text-[1rem] leading-[1.5rem] md:text-md"
         )}
       >
         {props.leftAccessory ? (
-          <Icon name={props.leftAccessory} size={16} />
+          <Icon name={props.leftAccessory} size={20} />
         ) : undefined}
         {props.label}
         {props.rightAccessory ? (
-          <Icon name={props.rightAccessory} size={16} />
+          <Icon name={props.rightAccessory} size={20} />
         ) : undefined}
       </div>
     </>
@@ -51,13 +52,13 @@ export const Button = (props: ButtonProps) => {
   if (href) {
     if (!props.isExternal) {
       return (
-        <Link href={href} className={buttonClasses}>
+        <Link href={href} className={buttonClasses} target={props.target}>
           {buttonInner}
         </Link>
       );
     } else {
       return (
-        <a href={href} className={buttonClasses}>
+        <a href={href} className={buttonClasses} target={props.target}>
           {buttonInner}
         </a>
       );

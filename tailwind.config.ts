@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     fontSize: {
       xl: ['3rem', '3.125rem'],
-      lg: ['1.5rem', '2rem'],
+      lg: ['1.75rem', '2.25rem'],
       md: ['1.125rem', '1.75rem'],
       sm: ['0.875rem', '1.125rem'],
     },
