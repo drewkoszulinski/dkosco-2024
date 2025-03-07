@@ -3,9 +3,9 @@ import "./globals.css";
 import { Layout } from "./components/Layout";
 
 export const metadata: Metadata = {
-  title: "Drew Koszulinski | Product Designer & Developer",
+  title: "Drew Koszulinski | Photography, product design & web development",
   description:
-    "Drew Koszulinski's product design and frontend engineering portfolio",
+    "Drew Koszulinski's photography, product design, and web development portfolio",
 };
 
 export default function RootLayout({
