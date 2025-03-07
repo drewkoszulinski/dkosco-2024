@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { syne } from "./fonts";
 import "./globals.css";
-import classNames from "classnames";
+import { Layout } from "./components/Layout";
 
 export const metadata: Metadata = {
   title: "Drew Koszulinski | Product Designer & Developer",
@@ -15,15 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-full h-screen bg-[var(--color-bg-primary)]">
-      <body
-        className={classNames(
-          syne.className,
-          "bg-[var(--color-bg-primary)] antialiased"
-        )}
-      >
-        {children}
-      </body>
+    <html lang="en" className="w-full h-screen">
+      <Layout>{children}</Layout>
     </html>
   );
 }

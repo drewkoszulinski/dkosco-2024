@@ -10,6 +10,7 @@ interface TextProps {
   color?: "primary" | "secondary" | "tertiary" | "highlight";
   isMono?: boolean;
   useBottomMargin?: boolean;
+  align?: "left" | "center";
 }
 
 export const Text = (props: TextProps) => {
@@ -20,7 +21,7 @@ export const Text = (props: TextProps) => {
     <Tag
       className={classNames("max-w-full", {
         "text-[2.5rem] leading-[2.625rem] md:text-xl": size === "xl",
-        "text-lg mb-2": size === "lg",
+        "text-lg": size === "lg",
         "text-[1.25rem] leading-[1.75rem] md:text-[1.5rem] font-medium":
           size === "lg" && props.isMono,
         "text-[1rem] leading-[1.5rem] md:text-md font-medium": size === "md",
@@ -28,15 +29,20 @@ export const Text = (props: TextProps) => {
         "font-bold": size === "xl" && !props.isMono,
         "font-semibold": size === "lg" && !props.isMono,
 
-        "mb-4": props.useBottomMargin,
+        "mb-0": props.useBottomMargin === false,
+        "mb-2":
+          props.useBottomMargin === true || props.useBottomMargin === undefined,
+
+        "text-left": props.align === "left" || props.align === undefined,
+        "text-center": props.align === "center",
 
         "text-[var(--color-text-primary)]": color === "primary",
         "text-[var(--color-text-secondary)]": color === "secondary",
         "text-[var(--color-text-tertiary)]": color === "tertiary",
         "text-[var(--color-text-highlight)]": color === "highlight",
 
-        "font-reg": props.isMono === true,
-        [roboto_mono.className]: props.isMono === true,
+        "font-reg": props.isMono != false && props.isMono,
+        [roboto_mono.className]: props.isMono != false && props.isMono,
       })}
     >
       {props.children}
