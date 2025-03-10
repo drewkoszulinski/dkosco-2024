@@ -18,7 +18,7 @@ const PhotoItem = (props: PhotoItemProps) => {
         src={props.src}
         width={1200}
         height={1200}
-        className="mx-auto"
+        className="mx-auto max-h-[95vh] w-auto"
         priority
       />
     </div>
