@@ -12,13 +12,15 @@ interface PhotoItemProps {
 
 const PhotoItem = (props: PhotoItemProps) => {
   return (
-    <div className={classNames("lg:px-24 lg:pb-24 w-full px-2")}>
+    <div
+      className={classNames("lg:px-24 lg:pb-24 pb-12 w-full px-2 max-w-full")}
+    >
       <Image
         alt={props.alt}
         src={props.src}
         width={1200}
         height={1200}
-        className="mx-auto max-w-[1060px] max-h-[95vh] w-auto"
+        className="mx-auto max-w-[1060px] max-h-[95vh] w-full"
         priority
       />
     </div>
