@@ -30,51 +30,39 @@ const PhotoItem = (props: PhotoItemProps) => {
 const photoArr: PhotoItemProps[] = [
   {
     alt: "",
-    src: "/portfolio-photos/jeeves-1.jpg",
+    src: "/portfolio-photos/jeeves-01.jpg",
   },
   {
     alt: "",
-    src: "/portfolio-photos/jeeves-2.jpg",
+    src: "/portfolio-photos/jeeves-02.jpg",
   },
   {
     alt: "",
-    src: "/portfolio-photos/jeeves-3.jpg",
+    src: "/portfolio-photos/jeeves-03.jpg",
   },
   {
     alt: "",
-    src: "/portfolio-photos/jeeves-4.jpg",
+    src: "/portfolio-photos/jeeves-04.jpg",
   },
   {
     alt: "",
-    src: "/portfolio-photos/jeeves-5.jpg",
+    src: "/portfolio-photos/jeeves-05.jpg",
   },
   {
     alt: "",
-    src: "/portfolio-photos/jeeves-6.jpg",
+    src: "/portfolio-photos/jeeves-06.jpg",
   },
   {
     alt: "",
-    src: "/portfolio-photos/jeeves-1.jpg",
+    src: "/portfolio-photos/jeeves-07.jpg",
   },
   {
     alt: "",
-    src: "/portfolio-photos/jeeves-1.jpg",
+    src: "/portfolio-photos/jeeves-08.jpg",
   },
   {
     alt: "",
-    src: "/portfolio-photos/jeeves-7.jpg",
-  },
-  {
-    alt: "",
-    src: "/portfolio-photos/jeeves-8.jpg",
-  },
-  {
-    alt: "",
-    src: "/portfolio-photos/jeeves-9.jpg",
-  },
-  {
-    alt: "",
-    src: "/portfolio-photos/jeeves-10.jpg",
+    src: "/portfolio-photos/jeeves-09.jpg",
   },
   {
     alt: "",
