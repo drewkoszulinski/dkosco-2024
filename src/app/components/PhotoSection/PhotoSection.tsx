@@ -73,12 +73,36 @@ const photoArr: PhotoItemProps[] = [
     src: "/portfolio-photos/portfolio-photo-10.jpg",
   },
   {
-    alt: "a creek stretches out through a grassy field at the base of some dramatic, snowcapped peaks.",
-    src: "/portfolio-photos/portfolio-photo-13.jpg",
+    alt: "",
+    src: "/portfolio-photos/portfolio-photo-17.jpg",
   },
   {
-    alt: "A view from above a black sand beach and a lush, green and rocky cliff.",
-    src: "/portfolio-photos/portfolio-photo-14.jpg",
+    alt: "",
+    src: "/portfolio-photos/portfolio-photo-18.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/portfolio-photo-19.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/portfolio-photo-20.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/portfolio-photo-22.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/portfolio-photo-23.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/portfolio-photo-24.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/portfolio-photo-25.jpg",
   },
 ];
 
