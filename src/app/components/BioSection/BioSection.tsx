@@ -70,7 +70,7 @@ export const BioSection = (props: BioSectionProps) => {
           variant="primary"
           target="_blank"
         />
-        {props.variant === "design-dev" && (
+        {/* {props.variant === "design-dev" && (
           <Button
             href="/cv-drew-koszulinski.pdf"
             label="CV"
@@ -78,7 +78,7 @@ export const BioSection = (props: BioSectionProps) => {
             variant="primary"
             target="_blank"
           />
-        )}
+        )} */}
       </div>
     </div>
   );

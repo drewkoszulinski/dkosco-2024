@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Layout } from "./components/Layout";
 import { syne } from "./fonts";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Drew Koszulinski | Photography, product design & web development",
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`w-full h-screen ${syne.className}`}>
-      <Layout>{children}</Layout>
+      <Layout>
+        {children}
+        <Analytics />
+      </Layout>
     </html>
   );
 }
