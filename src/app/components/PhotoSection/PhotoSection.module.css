@@ -1,0 +1,39 @@
+.tab {
+  padding: 6px 6px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition-duration: var(--transition-duration-sm);
+  position: relative;
+  overflow: visible;
+  border-radius: var(--radius-sm);
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  display: block;
+  margin-top: 4px;
+  height: 3px;
+  border-radius: var(--radius-full);
+  width: 100%;
+  background-color: var(--color-text-highlight);
+  opacity: 0;
+  transition: opacity var(--transition-duration-sm);
+}
+
+.tab:hover {
+  color: var(--color-text-button);
+  background-color: var(--color-bg-secondary);
+}
+
+.tab-active {
+  color: var(--color-text-button);
+  pointer-events: none;
+}
+
+.tab-active::after {
+  opacity: 1;
+}

@@ -15,6 +15,7 @@
   --line-height-md: 1.5rem;
   
   --radius-full: 999px;
+  --radius-sm: 8px;
 
   --shadow-focus-ring: 0px 0px 0px 4px var(--color-border-focus-ring),
   inset 0px 0px 0px 2px var(--color-bg-primary);

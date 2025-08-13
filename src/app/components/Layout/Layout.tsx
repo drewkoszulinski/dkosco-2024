@@ -4,7 +4,7 @@ import { Text } from "../Text";
 import { Switch } from "../Switch";
 import { syne } from "@/app/fonts";
 import React, { useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,11 +12,18 @@ interface LayoutProps {
 
 export const Layout = (props: LayoutProps) => {
   const pathname = usePathname();
-  const urlState = pathname === "/photo" ? true : false;
+  const urlState = pathname === "/" ? true : false;
   const [isPhoto, setIsPhoto] = useState(urlState);
 
-  const onSwitchClick = () => {
+  const router = useRouter();
+
+  const handleSwitchPress = () => {
     setIsPhoto(!isPhoto);
+    if (isPhoto) {
+      router.push("/design-dev");
+    } else {
+      router.push("/");
+    }
   };
 
   return (
@@ -31,7 +38,7 @@ export const Layout = (props: LayoutProps) => {
         className={classNames(
           "w-full flex flex-col lg:flex-row items-center lg:items-start bg-[var(--color-bg-primary)] transition-md py-4 px-4",
           {
-            hidden: pathname != "/" && pathname != "/photo",
+            hidden: pathname != "/" && pathname != "/design-dev",
           }
         )}
       >
@@ -47,11 +54,11 @@ export const Layout = (props: LayoutProps) => {
           <Text size="lg" as="h1" useBottomMargin={false} align="center">
             Drew Koszulinski
           </Text>
-          <Text size="md" as="h2" color="highlight" isMono align="center">
-            Film photographer
+          <Text size="md" as="h2" color="highlight" align="center">
+            Photographer
           </Text>
         </div>
-        <Switch isPhoto={isPhoto} onClick={onSwitchClick} />
+        <Switch isPhoto={isPhoto} onClick={handleSwitchPress} />
       </div>
       <main
         className={classNames(

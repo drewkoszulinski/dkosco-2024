@@ -1,9 +1,11 @@
+"use client";
+
 import styles from "./Button.module.css";
 import React from "react";
 import classNames from "classnames";
-import Link from "next/link";
 import { Icon, IconNameProps } from "../Icon";
 import { roboto_mono } from "@/app/fonts";
+import Link from "next/link";
 
 interface ButtonProps {
   label: string;
@@ -22,7 +24,7 @@ export const Button = (props: ButtonProps) => {
   const { variant = "primary", label, onClick, isDisabled, href } = props;
 
   const buttonClasses = classNames(
-    "transition-sm min-w-max max-w-max rounded-md py-3 px-4",
+    "transition-sm min-w-max max-w-max rounded-md py-3 px-4 body-md",
     styles["button"],
     roboto_mono.className,
     {
@@ -35,7 +37,7 @@ export const Button = (props: ButtonProps) => {
     <>
       <div
         className={classNames(
-          "inline-flex gap-3 justify-center text-center items-center text-[1rem] leading-[1.5rem] md:text-md"
+          "inline-flex gap-3 justify-center text-center items-center text-[1rem] leading-[1.5rem]"
         )}
       >
         {props.leftAccessory ? (
@@ -52,7 +54,12 @@ export const Button = (props: ButtonProps) => {
   if (href) {
     if (!props.isExternal) {
       return (
-        <Link href={href} className={buttonClasses} target={props.target}>
+        <Link
+          href={href}
+          className={buttonClasses}
+          target={props.target}
+          onClick={onClick ? onClick : undefined}
+        >
           {buttonInner}
         </Link>
       );

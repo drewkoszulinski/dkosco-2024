@@ -38,7 +38,7 @@ export const BioSection = (props: BioSectionProps) => {
           </Text>
         ) : (
           <Text color="highlight" as="h4" isMono>
-            Film photographer
+            Landscape & portrait photographer
           </Text>
         )}
       </div>
