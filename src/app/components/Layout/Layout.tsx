@@ -2,7 +2,6 @@
 import classNames from "classnames";
 import { Text } from "../Text";
 import { Switch } from "../Switch";
-import { syne } from "@/app/fonts";
 import React, { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -29,7 +28,6 @@ export const Layout = (props: LayoutProps) => {
   return (
     <body
       className={classNames(
-        syne.className,
         "antialiased",
         isPhoto === false ? "theme-dark" : "theme-light"
       )}

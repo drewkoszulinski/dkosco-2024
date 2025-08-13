@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Layout } from "./components/Layout";
+import { syne } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Drew Koszulinski | Photography, product design & web development",
@@ -14,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-full h-screen">
+    <html lang="en" className={`w-full h-screen ${syne.className}`}>
       <Layout>{children}</Layout>
     </html>
   );
