@@ -11,9 +11,9 @@ export default function Home() {
 
   return (
     <>
-      {/* <Suspense fallback={<div>Loading...</div>}> */}
-      <PhotoSection isHidden={!isPhoto} />
-      {/* </Suspense> */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <PhotoSection isHidden={!isPhoto} />
+      </Suspense>
       <BioSection variant={isPhoto ? "photo" : "design-dev"} />
     </>
   );
