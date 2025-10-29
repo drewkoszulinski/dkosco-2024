@@ -141,6 +141,49 @@ const portraitArr: PhotoItemProps[] = [
   },
 ];
 
+const architectureArr: PhotoItemProps[] = [
+  {
+    alt: "",
+    src: "/portfolio-photos/architecture-1.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/architecture-2.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/architecture-3.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/architecture-4.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/architecture-5.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/architecture-6.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/architecture-7.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/architecture-8.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/architecture-9.jpg",
+  },
+  {
+    alt: "",
+    src: "/portfolio-photos/architecture-10.jpg",
+  },
+];
+
 const PhotoItem = (props: PhotoItemProps) => {
   return (
     <div
@@ -163,27 +206,34 @@ export const PhotoSection = (props: PhotoSectionProps) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  // Get current tab from URL params, default to landscapes (true)
+  // Get current tab from URL params, default to landscape
   const currentTab = searchParams.get("tab");
-  const [isLandscape, setIsLandscape] = React.useState(() => {
-    if (currentTab === "portrait") return false;
-    return true; // default to landscapes
+  const [activeTab, setActiveTab] = React.useState<
+    "landscape" | "portrait" | "architecture"
+  >(() => {
+    if (currentTab === "portrait") return "portrait";
+    if (currentTab === "architecture") return "architecture";
+    return "landscape"; // default to landscape
   });
 
   // Update URL when tab changes
-  const handleTabChange = (newIsLandscape: boolean) => {
-    setIsLandscape(newIsLandscape);
+  const handleTabChange = (
+    newTab: "landscape" | "portrait" | "architecture"
+  ) => {
+    setActiveTab(newTab);
     const params = new URLSearchParams(searchParams.toString());
-    params.set("tab", newIsLandscape ? "landscape" : "portrait");
+    params.set("tab", newTab);
     router.push(`?${params.toString()}`);
   };
 
   // Sync state with URL params on mount and param changes
   React.useEffect(() => {
     if (currentTab === "portrait") {
-      setIsLandscape(false);
+      setActiveTab("portrait");
+    } else if (currentTab === "architecture") {
+      setActiveTab("architecture");
     } else {
-      setIsLandscape(true);
+      setActiveTab("landscape");
     }
   }, [currentTab]);
   return (
@@ -195,44 +245,56 @@ export const PhotoSection = (props: PhotoSectionProps) => {
       <div className={classNames("flex flex-row justify-center mb-10 gap-x-6")}>
         <button
           className={classNames(styles["tab"], {
-            [styles["tab-active"]]: isLandscape,
+            [styles["tab-active"]]: activeTab === "landscape",
           })}
-          onClick={() => handleTabChange(true)}
+          onClick={() => handleTabChange("landscape")}
         >
           <Text
-            color={isLandscape ? "highlight" : "tertiary"}
+            color={activeTab === "landscape" ? "highlight" : "tertiary"}
             useBottomMargin={false}
-            isMono
           >
-            Landscapes
+            Landscape
           </Text>
         </button>
         <button
           className={classNames(styles["tab"], {
-            [styles["tab-active"]]: !isLandscape,
+            [styles["tab-active"]]: activeTab === "portrait",
           })}
-          onClick={() => handleTabChange(false)}
+          onClick={() => handleTabChange("portrait")}
         >
           <Text
-            color={isLandscape ? "tertiary" : "highlight"}
+            color={activeTab === "portrait" ? "highlight" : "tertiary"}
             useBottomMargin={false}
-            isMono
           >
-            Portraits
+            Portrait
+          </Text>
+        </button>
+        <button
+          className={classNames(styles["tab"], {
+            [styles["tab-active"]]: activeTab === "architecture",
+          })}
+          onClick={() => handleTabChange("architecture")}
+        >
+          <Text
+            color={activeTab === "architecture" ? "highlight" : "tertiary"}
+            useBottomMargin={false}
+          >
+            Architecture
           </Text>
         </button>
       </div>
-      {isLandscape
-        ? landscapeArr.map((photo) => {
-            return (
-              <PhotoItem src={photo.src} alt={photo.alt} key={photo.src} />
-            );
-          })
-        : portraitArr.map((photo) => {
-            return (
-              <PhotoItem src={photo.src} alt={photo.alt} key={photo.src} />
-            );
-          })}
+      {activeTab === "landscape" &&
+        landscapeArr.map((photo) => {
+          return <PhotoItem src={photo.src} alt={photo.alt} key={photo.src} />;
+        })}
+      {activeTab === "portrait" &&
+        portraitArr.map((photo) => {
+          return <PhotoItem src={photo.src} alt={photo.alt} key={photo.src} />;
+        })}
+      {activeTab === "architecture" &&
+        architectureArr.map((photo) => {
+          return <PhotoItem src={photo.src} alt={photo.alt} key={photo.src} />;
+        })}
     </div>
   );
 };
